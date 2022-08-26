@@ -16,7 +16,7 @@ const FS_WATCH_OPTS = {
 // Note:
   // Not all the below are now used or supported by this code
 const UDD_PATHS = {
-  'win': '%LOCALAPPDATA%\\Google\\Chrome\\User Data',
+  'win': '%LOCALAPPDATA%\\BraveSoftware\\Brave-Browser\\User Data',
   'winxp' : '%USERPROFILE%\\Local Settings\\Application Data\\Google\\Chrome\\User Data',
   'macos' : Path.resolve(os.homedir(), 'Library/Application Support/Google/Chrome'),
   'nix' : Path.resolve(os.homedir(), '.config/google-chrome'),

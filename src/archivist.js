@@ -666,11 +666,11 @@ export default Archivist;
       const origin = (new URL(url).origin);
       let originDir = State.Cache.get(origin);
       if ( ! originDir ) {
-        originDir = Path.resolve(library_path(), origin.replace(TBL, '_'));
+        originDir = Path.resolve(library_path(), origin.replace(TBL, '_').replace(/:/g, "_"));
         try {
           await Fs.promises.mkdir(originDir, {recursive:true});
         } catch(e) {
-          console.warn(`Issue with origin directory ${Path.dirname(responsePath)}`, e);
+          console.warn(`Issue with origin directory ${Path.dirname(originDir)}`, e);
         }
         State.Cache.set(origin, originDir);
       }

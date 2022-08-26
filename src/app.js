@@ -16,6 +16,7 @@ const CHROME_OPTS = !NO_SANDBOX ? [
   '--no-sandbox'
 ];
 const LAUNCH_OPTS = {
+  chromePath: "C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
   logLevel: DEBUG ? 'verbose' : 'silent',
   port: chrome_port, 
   chromeFlags:CHROME_OPTS, 
