@@ -9,7 +9,7 @@
     "diskernet": "build/22120.js"
   },
   "scripts": {
-    "bundle": "npx rollup --config",
+    "bundle": "pnpx rollup --config",
     "start": "node src/app.js",
     "setup": "bash ./scripts/build_setup.sh",
     "build": "echo 'please run ./scripts/build_setup.sh first (one time only) and then ./scripts/compile.sh'",
@@ -17,10 +17,10 @@
     "test": "nodemon src/app.js",
     "save": "nodemon src/app.js 22120 save",
     "serve": "nodemon src/app.js 22120 serve",
-    "lint": "watch -n 5 npx eslint .",
+    "lint": "watch -n 5 pnpx eslint .",
     "test-hl": "node src/highlighter.js",
     "postpublish": "cp package.json .package.build.json",
-    "prepublishOnly": "npm run bundle && npx webpack ."
+    "prepublishOnly": "pnpm run bundle && pnpx webpack ."
   },
   "repository": {
     "type": "git",

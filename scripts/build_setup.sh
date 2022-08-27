@@ -6,7 +6,7 @@ echo "Installing pkg..."
 mkdir -p bin/
 mkdir -p build/
 
-pkg -v || npm i -g pkg
+pkg -v || pnpm i -g pkg
 
 #curl -L -o upx.tar.xz https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz
 #tar -xJf upx.tar.xz

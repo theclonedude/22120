@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-unset npm_config_prefix
-source $HOME/.nvm/nvm.sh
-. $HOME/.profile
-nvm use --lts
+#unset npm_config_prefix
+#source $HOME/.nvm/nvm.sh
+#. $HOME/.profile
+#nvm use --lts
 
 echo "Cleaning old build and dist files..."
 
@@ -34,9 +34,9 @@ if [[ ! -z "$patch_required" ]]; then
   done <<< $files
 fi
 
-npm run bundle
+pnpm run bundle
 echo "Bundling javascript..."
-npx webpack
+pnpx webpack
 chmod +x ./build/22120.js
 echo "Building for windows nix and macos..."
 pkg --compress Brotli . 
@@ -45,4 +45,5 @@ echo "Restoring dev (ES module) mode..."
 ./scripts/go_dev.sh
 
 echo "Rebundling an es module for npm es module import..."
-npm run bundle
+pnpm run bundle
+
